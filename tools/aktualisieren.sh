@@ -34,7 +34,7 @@ echo "== Python-Pakete"
 .venv/bin/pip install --quiet -r backend/requirements.txt
 
 echo "== Datenbank migrieren"
-(cd backend && PYTHONPATH=. ../.venv/bin/alembic upgrade head)
+(cd backend && PYTHONPATH=. "$WURZEL"/.venv/bin/alembic upgrade head)
 
 echo "== Frontend bauen"
 (cd frontend && npm ci --no-audit --no-fund --loglevel=error && npm run build --silent)

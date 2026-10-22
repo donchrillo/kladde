@@ -77,13 +77,13 @@ else
 fi
 
 echo "== Datenbank anlegen bzw. migrieren"
-(cd backend && PYTHONPATH=. ../.venv/bin/alembic upgrade head)
+(cd backend && PYTHONPATH=. "$WURZEL"/.venv/bin/alembic upgrade head)
 
 echo "== Frontend bauen"
 (cd frontend && npm ci --no-audit --no-fund --loglevel=error && npm run build --silent)
 
 echo "== Erstes Administratorkonto"
-ANZAHL="$(cd backend && PYTHONPATH=. ../.venv/bin/python -c \
+ANZAHL="$(cd backend && PYTHONPATH=. "$WURZEL"/.venv/bin/python -c \
     'from src.database import SessionLocal; from src.models import User
 with SessionLocal() as db: print(db.query(User).count())')"
 if [ "$ANZAHL" = 0 ]; then
