@@ -1,0 +1,39 @@
+# --- Secrets & lokale Umgebung ---
+.env
+.env.local
+.venv/
+venv/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# --- Node / Frontend ---
+node_modules/
+dist/
+dev-dist/
+.vite/
+
+# --- Datenbank (lokale SQLite-Dateien) ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- OS / Editor ---
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Hochgeladene Anhänge (gehören ins Backup, nicht ins Repo).
+backend/attachments/
+
+# Lokales Referenzmaterial (Screenshots, Skizzen) — gehört nicht ins Repo.
+planning/
