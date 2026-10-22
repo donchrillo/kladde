@@ -103,3 +103,5 @@ Architektur: `docs/architecture/`.
 (privat, Vereine, Bildung, gemeinnützige Einrichtungen). Kommerzielle Nutzung, etwa Verkauf
 oder Einsatz als Teil eines kostenpflichtigen Angebots, ist nicht gestattet. Bei Weitergabe
 müssen Lizenztext und die Zeile `Required Notice` mitgegeben werden.
+
+Beiträge sind willkommen, die Bedingungen dafür stehen in `CONTRIBUTING.md`.
